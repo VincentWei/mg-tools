@@ -31,6 +31,7 @@ standalone_version="no"
 
 AC_CHECK_HEADERS(minigui/common.h, have_libminigui=yes, foo=bar)
 AC_CHECK_HEADERS(freetype/freetype.h, have_libttf=yes, foo=bar)
+AC_CHECK_HEADERS(openssl/md5.h, have_openssl=yes, foo=bar)
 
 dnl ========================================================================
 dnl check for non-UNIX system
@@ -111,23 +112,23 @@ AC_SUBST(TTF_LIBS)
 AC_SUBST(TTF_TOOLS)
 
 AC_OUTPUT(
-Makefile
-res/Makefile
-tools/Makefile
-font-tools/Makefile
-mgcfg-trans/Makefile
-inner-res-trans/Makefile
-product-id/Makefile
-cryptool/Makefile
-rbfeditor/Makefile
-vbfeditor/Makefile
-qpfeditor/Makefile
-upfeditor/Makefile
-image-dumper/Makefile
-common/Makefile
-ttf2qpf/Makefile
-ttf2upf/Makefile
-bdf2upf/Makefile
-bdf2rbf/Makefile
+    Makefile
+    res/Makefile
+    tools/Makefile
+    font-tools/Makefile
+    mgcfg-trans/Makefile
+    inner-res-trans/Makefile
+    product-id/Makefile
+    cryptool/Makefile
+    rbfeditor/Makefile
+    vbfeditor/Makefile
+    qpfeditor/Makefile
+    upfeditor/Makefile
+    image-dumper/Makefile
+    common/Makefile
+    ttf2qpf/Makefile
+    ttf2upf/Makefile
+    bdf2upf/Makefile
+    bdf2rbf/Makefile
 )
 
