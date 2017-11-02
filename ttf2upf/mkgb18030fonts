@@ -1,0 +1,8 @@
+#!/bin/bash
+
+name=simsun18030
+oname=fmsong
+for size in 12 14 16; do
+    ./ttf2upf -p $size -t $oname -o $oname-gb18030-$size.upf $name.ttc
+done
+

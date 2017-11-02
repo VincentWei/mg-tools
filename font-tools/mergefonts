@@ -1,0 +1,69 @@
+#!/bin/bash
+
+unset UPFMERGE_ADJUST_ASCENT
+export UPFMERGE_IGNORE_HEIGHT=1
+
+rm fm*.upf -f
+
+dst_name=fmsong-ascii-gb2312
+src_name=B\&H-Lucida-mrncnn
+out_name=fmsong-latin-gb2312
+for size in 8; do
+    ./upfmerge upf-fonts/$dst_name-$size.upf upf-fonts/$src_name-$size.upf $out_name-$size.upf
+done
+./upfmerge upf-fonts/$dst_name-9.upf upf-fonts/$src_name-8.upf $out_name-9.upf
+
+dst_name=fmsong-ascii-gbk
+src_name=Adobe-Utopia-rrncnn
+out_name=fmsong-latin-gbk
+for size in 10 12 14 15 17 19 25; do
+    ./upfmerge upf-fonts/$dst_name-$size.upf upf-fonts/$src_name-$size.upf $out_name-$size.upf
+done
+./upfmerge upf-fonts/$dst_name-13.upf upf-fonts/$src_name-12.upf $out_name-13.upf
+./upfmerge upf-fonts/$dst_name-16.upf upf-fonts/$src_name-15.upf $out_name-16.upf
+./upfmerge upf-fonts/$dst_name-18.upf upf-fonts/$src_name-17.upf $out_name-18.upf
+./upfmerge upf-fonts/$dst_name-20.upf upf-fonts/$src_name-19.upf $out_name-20.upf
+
+dst_name=fmsong-gb18030
+src_name=fmsong-ascii-gbk
+out_name=fmsong-ascii-gb18030
+for size in 12 14 16; do
+    ./upfmerge upf-fonts/$dst_name-$size.upf upf-fonts/$src_name-$size.upf $out_name-$size.upf
+done
+
+dst_name=fmsong-ascii-gb18030
+src_name=Adobe-Utopia-rrncnn
+out_name=fmsong-latin-gb18030
+for size in 12 14; do
+    ./upfmerge $dst_name-$size.upf upf-fonts/$src_name-$size.upf $out_name-$size.upf
+done
+./upfmerge upf-fonts/$dst_name-16.upf upf-fonts/$src_name-15.upf $out_name-16.upf
+
+dst_name=fmhei-gbk
+src_name=Adobe-Helvetica-brncnn
+out_name=fmhei-latin-gbk
+for size in 18 20; do
+    ./upfmerge upf-fonts/$dst_name-$size.upf upf-fonts/$src_name-$size.upf $out_name-$size.upf
+done
+./upfmerge upf-fonts/$dst_name-16.upf upf-fonts/$src_name-17.upf $out_name-16.upf
+
+dst_name=fmkai-gb2312
+src_name=B\&H-LucidaTypewriter-mrncnn
+out_name=fmkai-latin-gb2312
+for size in 12 14 18 20; do
+    ./upfmerge upf-fonts/$dst_name-$size.upf upf-fonts/$src_name-$size.upf $out_name-$size.upf
+done
+./upfmerge upf-fonts/$dst_name-13.upf upf-fonts/$src_name-12.upf $out_name-13.upf
+./upfmerge upf-fonts/$dst_name-15.upf upf-fonts/$src_name-14.upf $out_name-15.upf
+./upfmerge upf-fonts/$dst_name-16.upf upf-fonts/$src_name-17.upf $out_name-16.upf
+
+dst_name=fmfsong-gb2312
+src_name=Adobe-Times-mrncnn
+out_name=fmfsong-latin-gb2312
+for size in 12 14 18 20; do
+    ./upfmerge upf-fonts/$dst_name-$size.upf upf-fonts/$src_name-$size.upf $out_name-$size.upf
+done
+./upfmerge upf-fonts/$dst_name-13.upf upf-fonts/$src_name-12.upf $out_name-13.upf
+./upfmerge upf-fonts/$dst_name-15.upf upf-fonts/$src_name-14.upf $out_name-15.upf
+./upfmerge upf-fonts/$dst_name-16.upf upf-fonts/$src_name-17.upf $out_name-16.upf
+

@@ -1,0 +1,41 @@
+#! /bin/bash
+
+./qpf2upf courier_80_50.qpf upf-courier-rrncnn-8-8-ISO8859-1,ISO8859-15
+./qpf2upf courier_100_50.qpf upf-courier-rrncnn-10-10-ISO8859-1,ISO8859-15
+./qpf2upf courier_120_50.qpf upf-courier-rrncnn-12-12-ISO8859-1,ISO8859-15
+./qpf2upf courier_140_50.qpf upf-courier-rrncnn-14-14-ISO8859-1,ISO8859-15
+./qpf2upf courier_180_50.qpf upf-courier-rrncnn-18-18-ISO8859-1,ISO8859-15
+./qpf2upf courier_240_50.qpf upf-courier-rrncnn-24-24-ISO8859-1,ISO8859-15
+
+
+./qpf2upf helvetica_80_50.qpf upf-helvetica-rrncnn-8-8-ISO8859-1,ISO8859-15
+./qpf2upf helvetica_100_50.qpf upf-helvetica-rrncnn-10-10-ISO8859-1,ISO8859-15
+./qpf2upf helvetica_120_50.qpf upf-helvetica-rrncnn-12-12-ISO8859-1,ISO8859-15
+./qpf2upf helvetica_140_50.qpf upf-helvetica-rrncnn-14-14-ISO8859-1,ISO8859-15
+./qpf2upf helvetica_180_50.qpf upf-helvetica-rrncnn-18-18-ISO8859-1,ISO8859-15
+./qpf2upf helvetica_240_50.qpf upf-helvetica-rrncnn-24-24-ISO8859-1,ISO8859-15
+
+
+./qpf2upf lucida_80_50.qpf upf-lucida-rrncnn-8-8-ISO8859-1,ISO8859-15
+./qpf2upf lucida_100_50.qpf upf-lucida-rrncnn-10-10-ISO8859-1,ISO8859-15
+./qpf2upf lucida_120_50.qpf upf-lucida-rrncnn-12-12-ISO8859-1,ISO8859-15
+./qpf2upf lucida_140_50.qpf upf-lucida-rrncnn-14-14-ISO8859-1,ISO8859-15
+./qpf2upf lucida_180_50.qpf upf-lucida-rrncnn-18-18-ISO8859-1,ISO8859-15
+./qpf2upf lucida_190_50.qpf upf-lucida-rrncnn-19-19-ISO8859-1,ISO8859-15
+./qpf2upf lucida_240_50.qpf upf-lucida-rrncnn-24-24-ISO8859-1,ISO8859-15
+
+
+./qpf2upf times_80_50.qpf upf-times-rrncnn-8-8-ISO8859-1,ISO8859-15
+./qpf2upf times_100_50.qpf upf-times-rrncnn-10-10-ISO8859-1,ISO8859-15
+./qpf2upf times_120_50.qpf upf-times-rrncnn-12-12-ISO8859-1,ISO8859-15
+./qpf2upf times_140_50.qpf upf-times-rrncnn-14-14-ISO8859-1,ISO8859-15
+./qpf2upf times_180_50.qpf upf-times-rrncnn-18-18-ISO8859-1,ISO8859-15
+./qpf2upf times_240_50.qpf upf-times-rrncnn-24-24-ISO8859-1,ISO8859-15
+
+
+./qpf2upf micro_40_50.qpf upf-micro-rrncnn-4-4-ISO8859-1,ISO8859-15
+
+./qpf2upf unifont_160_50.qpf upf-unifont-rrncnn-16-16-ISO8859-1,ISO8859-15,GB2312-0,GBK,BIG5,UTF-8
+
+./qpf2upf smoothtimes_100_50.qpf upf-times-rrncnn-5-10-ISO8859-1,ISO8859-15
+

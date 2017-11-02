@@ -1,0 +1,29 @@
+./qpf2upf fmfsong-12.qpf upf-fmfsong-rrncnn-12-12-GB2312,UTF-8,UTF-16LE,UTF-16BE
+./qpf2upf fmfsong-13.qpf upf-fmfsong-rrncnn-13-13-GB2312,UTF-8,UTF-16LE,UTF-16BE
+./qpf2upf fmfsong-14.qpf upf-fmfsong-rrncnn-14-14-GB2312,UTF-8,UTF-16LE,UTF-16BE
+./qpf2upf fmfsong-15.qpf upf-fmfsong-rrncnn-15-15-GB2312,UTF-8,UTF-16LE,UTF-16BE
+./qpf2upf fmfsong-16.qpf upf-fmfsong-rrncnn-16-16-GB2312,UTF-8,UTF-16LE,UTF-16BE
+./qpf2upf fmfsong-18.qpf upf-fmfsong-rrncnn-18-18-GB2312,UTF-8,UTF-16LE,UTF-16BE
+./qpf2upf fmfsong-20.qpf upf-fmfsong-rrncnn-20-20-GB2312,UTF-8,UTF-16LE,UTF-16BE
+
+./qpf2upf fmhei-16.qpf upf-fmhei-rrncnn-16-16-ISO8859-1,ISO8859-15,GB2312,BIG5,GBK,UTF-8,UTF-16LE,UTF-16BE
+./qpf2upf fmhei-18.qpf upf-fmhei-rrncnn-18-18-ISO8859-1,ISO8859-15,GB2312,BIG5,GBK,UTF-8,UTF-16LE,UTF-16BE
+./qpf2upf fmhei-20.qpf upf-fmhei-rrncnn-20-20-ISO8859-1,ISO8859-15,GB2312,BIG5,GBK,UTF-8,UTF-16LE,UTF-16BE
+
+
+./qpf2upf fmkai-12.qpf upf-fmkai-rrncnn-12-12-ISO8859-1,ISO8859-15,GB2312,UTF-8,UTF-16LE,UTF-16BE
+./qpf2upf fmkai-13.qpf upf-fmkai-rrncnn-13-13-ISO8859-1,ISO8859-15,GB2312,UTF-8,UTF-16LE,UTF-16BE
+./qpf2upf fmkai-14.qpf upf-fmkai-rrncnn-14-14-ISO8859-1,ISO8859-15,GB2312,UTF-8,UTF-16LE,UTF-16BE
+./qpf2upf fmkai-15.qpf upf-fmkai-rrncnn-15-15-ISO8859-1,ISO8859-15,GB2312,UTF-8,UTF-16LE,UTF-16BE
+./qpf2upf fmkai-16.qpf upf-fmkai-rrncnn-16-16-ISO8859-1,ISO8859-15,GB2312,UTF-8,UTF-16LE,UTF-16BE
+./qpf2upf fmkai-18.qpf upf-fmkai-rrncnn-18-18-ISO8859-1,ISO8859-15,GB2312,UTF-8,UTF-16LE,UTF-16BE
+./qpf2upf fmkai-20.qpf upf-fmkai-rrncnn-20-20-ISO8859-1,ISO8859-15,GB2312,UTF-8,UTF-16LE,UTF-16BE
+
+./qpf2upf fmsong-12.qpf upf-fmsong-rrncnn-12-12-ISO8859-1,ISO8859-15,GB2312,BIG5,GBK,UTF-8,UTF-16LE,UTF-16BE
+./qpf2upf fmsong-13.qpf upf-fmsong-rrncnn-12-12-ISO8859-1,ISO8859-15,GB2312,BIG5,GBK,UTF-8,UTF-16LE,UTF-16BE
+./qpf2upf fmsong-14.qpf upf-fmsong-rrncnn-12-12-ISO8859-1,ISO8859-15,GB2312,BIG5,GBK,UTF-8,UTF-16LE,UTF-16BE
+./qpf2upf fmsong-15.qpf upf-fmsong-rrncnn-12-12-ISO8859-1,ISO8859-15,GB2312,BIG5,GBK,UTF-8,UTF-16LE,UTF-16BE
+./qpf2upf fmsong-16.qpf upf-fmsong-rrncnn-12-12-ISO8859-1,ISO8859-15,GB2312,BIG5,GBK,UTF-8,UTF-16LE,UTF-16BE
+./qpf2upf fmsong-18.qpf upf-fmsong-rrncnn-12-12-ISO8859-1,ISO8859-15,GB2312,BIG5,GBK,UTF-8,UTF-16LE,UTF-16BE
+
+

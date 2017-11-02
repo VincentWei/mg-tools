@@ -1,0 +1,39 @@
+*******************************************************************************
+12/07/2011: bdf2rbf tool, add the gb18030 support and the bug in the
+common/parse_bdf.c; And I also add the help file for the bdf files whice is
+translated by MTK tools. (dongjunjie)
+	* M       common/parse_bdf.c
+	* M       bdf2rbf/Makefile.am
+	* A       bdf2rbf/bdf2rbf_gb18030.c
+	* A       help_mtk.txt
+
+
+09/27/2010: mgcfg-trans: Rename __MGINCORE_RES to _MGINCORE_RES, and replace
+'\t' with four SPACES. (wanzheng)
+	* mgcfg-trans/mgcfg-trans.l
+
+06/11/2010: Add bdf2rbf tool, and fix some compiling warnings. (wanzheng)
+	+ bdf2rbf/
+	* ChangeLog
+	* common/parse_bdf.c
+	* configure.in
+	* inner-res-trans/bin2c.cpp
+	* inner-res-trans/transobj.cpp
+	* inner-res-trans/transobj.h
+	* Makefile.am
+
+07/29/2009: Merge inner-res-trans and mgcfg-trans from mgadp-tools. (weiym)
+	* inner-res-trans/
+	* mgcfg-trans/
+
+07/27/2009: Add product-id tool (wanzheng)
+	+ product-id/
+	* Makefile.am
+	* configure.in
+
+04/09/2009: Add ttf2qpf tool (ymwei)
+	+ ttf2qpf/*
+
+03/23/2009: Fix the 4 bytes allignment BUG when write the UPF font bitmap data
+(hejian).
+	* font-tools/qpf2upf.c

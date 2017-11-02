@@ -1,0 +1,14 @@
+#!/bin/bash
+
+name=simsun
+oname=fmsong
+for size in 12 13 14 15 16 18; do
+    ./ttf2upf -p $size -t $oname -o $oname-gbk-$size.upf $name.ttc
+done
+
+name=simhei
+oname=fmhei
+for size in 16 18 20; do
+    ./ttf2upf -p $size -t $oname -o $oname-gbk-$size.upf $name.ttf
+done
+

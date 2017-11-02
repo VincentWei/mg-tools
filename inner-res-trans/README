@@ -1,0 +1,61 @@
+inner-trans is an application used for translate res into incore
+
+compile:
+	make
+
+how to use it
+inner-trans command line:
+	-i 			input dir
+	-l			a file list of resouces
+	-o			output dir
+	-m			macro enclose the translated file, eg:
+				a image "bk.png" will be translated to "bk.png.c"
+				//bk.png.c	
+				#ifdef <macro>
+				....
+				#endif
+
+				so, <macro> is defined by "-m". by default it's "_MGINCORE_RES"
+	-n			name of INNER_RES array name, by default "_reses"
+	
+inner-trans will
+	1. get the filename from listfile
+	2. read the file from input dir
+	3. call trnaslator to make a <filename>.c file in output dir
+	4. set the name of <filename>.c, the ruler is
+		_<ext_name>_<filename_without_ext>_data
+
+	5. after all the files in the listfile, it will output a INNER_RES array:
+		extern _<ext_name>_<filename_without_ext>_data
+		...
+
+		static INNER_RES <inner_res_name> [] = {
+			{ <key>, <varname>, <sizeofvar>, <additional> },
+			...
+		};
+		key is Str2Key(<filename>)
+
+
+The step of inner-trans:
+	1. papare the input dir
+	2. get the list of resouce, e.g:
+		find ./<inputdir> > list
+	3. mkdir the output dir
+	4. translate, e.g:
+		inner-trans -i <inputdir> -l list -o <outputdir> -n <InnerArrayName> -m <MarcoName>
+	5. modify the _<InnerArrayName>.c and copy <outputdir>/*.c into the dest dir
+	6. In you appliction, use the inner resouce, e.g:
+		//resouce.c
+		#include "_<InnerArrayName>.c"
+		...
+		// add into resource manager
+		AddInnerRes(<InnerArrayName>, sizeof(<InnerArrayName>)/sizeof(INNER_RES), FALSE);
+		...
+		// load or get it
+		LoadResouce(<res_name>,<res_type>,<usr_param>);
+		...
+		GetResouce(<key_of_res_name>);
+		...
+		ReleaseResource(<key_of_res_name>);
+	
+

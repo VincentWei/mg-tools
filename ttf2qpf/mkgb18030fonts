@@ -1,0 +1,8 @@
+#!/bin/bash
+
+name=SimSun18030
+oname=fmsong
+for size in 12 14 16; do
+    ./ttf2qpf -p $size -o $oname-gb18030-$size.qpf $name.ttc
+done
+

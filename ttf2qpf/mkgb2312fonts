@@ -1,0 +1,14 @@
+#!/bin/bash
+
+name=simkai
+oname=fmkai
+for size in 12 13 14 15 16 18 20; do
+    ./ttf2qpf -p $size -o $oname-gb2312-$size.qpf $name.ttf
+done
+
+name=simfang
+oname=fmfsong
+for size in 12 13 14 15 16 18 20; do
+    ./ttf2qpf -p $size -o $oname-gb2312-$size.qpf $name.ttf
+done
+

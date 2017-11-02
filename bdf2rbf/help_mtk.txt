@@ -1,0 +1,47 @@
+How to generate the rbf from BDF files which is translated by the MTK tools?
+
+Open the bdf file by a text editor, e.g vi, and and the special infos in its head:
+
+add "
+FONT
+"
+after the STARTFONT
+
+add "
+STARTPROPERTIES
+FOUNDRY fmsoft
+FAMILY_NAME  gb18030
+WEIGTH_NAME regular
+SLANT regular
+SETWEIGHT_NAME regular
+CHARSET_REGISTRY none
+CHARSET_ENCODING GB18030
+FACE_NAME bdf
+PIXEL_SIZE 15
+FONT_ASCENT 13
+FONT_DESCENT 3
+DEFAULT_CHAR 0
+ENDPROPERTIES
+"
+after the FONTBOUNDINGBOX
+
+the "PIXEL_SIZE" should be the frist value of "BBX" in the "STARTCHAR" and "ENDCHAR"
+the "FONT_ASCENT" should be the second value of "BBX" - 3, e,g, BBX is "
+BBX 15 16 0 -3
+"
+between the "STARTCHAR" and "ENDCHAR",
+
+the PIXEL_SIZE is 15
+the FONT_ASCENT should be 16 - 3
+the FONT_DESCENT should be 3
+
+May be the FONT_ASCENT should be the value of BBX's sencod value + its forth value;
+the FONT_DESCENT is the absolute value of the BBX's forth value?
+
+Why? It don't known, just do it!
+
+dongjunjie
+2011/7/12
+
+
+

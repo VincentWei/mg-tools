@@ -1,0 +1,36 @@
+#!/bin/bash
+
+n=fmfsong
+for s in 12 13 14 15 16 18 20; do
+    ./qpf2upf $n-gb2312-$s.qpf upf-$n-rrncnn-$s-$s-GB2312-0,UTF-8,UTF-16LE,UTF-16BE
+done
+
+n=fmkai
+for s in 12 13 14 15 16 18 20; do
+    ./qpf2upf $n-gb2312-$s.qpf upf-$n-rrncnn-$s-$s-GB2312-0,UTF-8,UTF-16LE,UTF-16BE
+done
+
+n=fmhei
+for s in 16 18 20; do
+    ./qpf2upf $n-gbk-$s.qpf upf-$n-rrncnn-$s-$s-GB2312-0,BIG5,GBK,UTF-8,UTF-16LE,UTF-16BE
+done
+
+n=fmsong
+for s in 12 13 14 15 16 18; do
+    ./qpf2upf $n-gbk-$s.qpf upf-$n-rrncnn-$s-$s-GB2312-0,BIG5,GBK,UTF-8,UTF-16LE,UTF-16BE
+done
+
+n=fmsong
+for s in 12 14 16; do
+    ./qpf2upf $n-gb18030-$s.qpf upf-$n-rrncnn-$s-$s-GB2312-0,BIG5,GBK,GB18030-0,UTF-8,UTF-16LE,UTF-16BE
+done
+
+n=fmsong
+for s in 7 8 9; do
+    ./qpf2upf $n-iso8859-gb2312-$s.qpf upf-$n-rrncnn-$s-$s-ISO8859-1,GB2312-0,UTF-8,UTF-16LE,UTF-16BE
+done
+
+for s in 10 11 17 19 20 21 22 23 24 25 26 27 28 29 30 31; do
+    ./qpf2upf $n-iso8859-gbk-$s.qpf upf-$n-rrncnn-$s-$s-ISO8859-1,GB2312-0,GBK,BIG5,UTF-8,UTF-16LE,UTF-16BE
+done
+
