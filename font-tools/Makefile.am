@@ -1,4 +1,4 @@
-INCLUDES=-I../common
+AM_CPPFLAGS=-I../common
 
 bin_PROGRAMS= vbf2c  bdf2vbf  qpf2upf  upf2c upfmerge upfbbox upfdump upfmetrics
 

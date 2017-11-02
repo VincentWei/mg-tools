@@ -1,4 +1,4 @@
-INCLUDES=-I../common
+AM_CPPFLAGS=-I../common
 
 noinst_PROGRAMS=bdf2upf
 
