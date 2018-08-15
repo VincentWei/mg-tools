@@ -1,5 +1,5 @@
 # Process this file with autoconf to produce a configure script.
-AC_INIT(mg-tools, 3.0.13, consult@minigui.com)
+AC_INIT(mg-tools, 3.2.0, consult@minigui.com)
 AC_CONFIG_SRCDIR([vbfeditor/vbfeditor.c])
 
 AM_INIT_AUTOMAKE
@@ -23,8 +23,6 @@ AC_FUNC_MALLOC
 
 dnl ========================================================================
 dnl check for libminigui
-have_libminigui="no"
-have_libttf="no"
 threads_version="no"
 procs_version="no"
 standalone_version="no"
@@ -68,31 +66,8 @@ STDIO_TOOLS="common tools mgcfg-trans inner-res-trans cryptool product-id font-t
 MINIGUI_LIBS=""
 MINIGUI_TOOLS=""
 if test "x$have_libminigui" != "xno"; then
-
-  AC_CHECK_DECLS(_MGRM_THREADS, threads_version="yes", foo=bar, [#include <minigui/common.h>])
-  AC_CHECK_DECLS(_MGRM_PROCESSES, procs_version="yes", foo=bar, [#include <minigui/common.h>])
-  AC_CHECK_DECLS(_MGRM_STANDALONE, standalone_version="yes", foo=bar, [#include <minigui/common.h>])
-
-  if test "x$threads_version" = "xyes"; then
-    MINIGUI_LIBS="-lminigui_ths -lpthread"
-  else
-    if test "x$standalone_version" = "xyes"; then
-      CFLAGS="$CFLAGS -D_REENTRANT"
-      MINIGUI_LIBS="-lminigui_sa"
-    else
-      MINIGUI_LIBS="-lminigui_procs"
-    fi  
-  fi
-  MINIGUI_LIBS="-lmgutils $MINIGUI_LIBS"
-
-  AC_CHECK_DECLS(_HAVE_MATH_LIB, MINIGUI_LIBS="$MINIGUI_LIBS -lm", foo=bar, [#include <minigui/common.h>])
-  AC_CHECK_DECLS(_MGIMAGE_PNG, MINIGUI_LIBS="$MINIGUI_LIBS -lpng", foo=bar, [#include <minigui/common.h>])
-  AC_CHECK_DECLS(_MGIMAGE_JPG, MINIGUI_LIBS="$MINIGUI_LIBS -ljpeg", foo=bar, [#include <minigui/common.h>])
-  AC_CHECK_DECLS(_MGFONT_TTF, MINIGUI_LIBS="$MINIGUI_LIBS -lttf", foo=bar, [#include <minigui/common.h>])
-  AC_CHECK_DECLS(_MGFONT_FT2, MINIGUI_LIBS="$MINIGUI_LIBS -lfreetype", foo=bar, [#include <minigui/common.h>])
-  AC_CHECK_DECLS(_MGIAL_DLCUSTOM, MINIGUI_LIBS="$MINIGUI_LIBS -ldl", foo=bar, [#include <minigui/common.h>])
-
-  MINIGUI_TOOLS="rbfeditor vbfeditor qpfeditor upfeditor image-dumper"
+  PKG_CHECK_MODULES([MINIGUI], [minigui >= 3.0.12])
+  MINIGUI_TOOLS="ngux-tools rbfeditor vbfeditor qpfeditor upfeditor image-dumper"
 fi
 
 TTF_LIBS=""
@@ -118,6 +93,7 @@ AC_OUTPUT(
     font-tools/Makefile
     mgcfg-trans/Makefile
     inner-res-trans/Makefile
+    ngux-tools/Makefile
     product-id/Makefile
     cryptool/Makefile
     rbfeditor/Makefile

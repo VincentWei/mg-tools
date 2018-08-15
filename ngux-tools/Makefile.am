@@ -1,0 +1,6 @@
+bin_PROGRAMS=gen_incore_bitmap
+bin_SCRIPTS=gen_audio_res.sh gen_incore_res.sh gen_incore_res.py
+
+gen_incore_bitmap_SOURCES=gen_incore_bitmap.c
+
+gen_incore_bitmap_LDADD=@MINIGUI_LIBS@
