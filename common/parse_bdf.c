@@ -52,7 +52,7 @@ static char* my_getline (char* buf, FILE* fp)
 do  \
 {   \
     body = my_getline (line_buf, fp);  \
-} while (!feof(fp) && strcmp (line_buf, header) != 0)
+} while (!feof(fp) && body != NULL && strcmp (line_buf, header) != 0)
 
 static BOOL get_font_propt (FILE* fp, BDF_INFO* info)
 {
@@ -66,8 +66,18 @@ static BOOL get_font_propt (FILE* fp, BDF_INFO* info)
             &info->fnt_bbox_x, &info->fnt_bbox_y);
 
     FIND_LINE (line_buf, fp, "STARTPROPERTIES", body);
+    if (feof (fp) || body == NULL) {
+        fprintf (stderr, "BDF Parsor: No STARTPROPERTIES found.\n");
+        return FALSE;
+    }
+
     while (1) {
         body = my_getline (line_buf, fp);
+
+        if (feof (fp)) {
+            fprintf (stderr, "BDF Parsor: Bad PROPERTIES section.\n");
+            return FALSE;
+        }
 
         if (strcmp (line_buf, "ENDPROPERTIES") == 0)
             break;

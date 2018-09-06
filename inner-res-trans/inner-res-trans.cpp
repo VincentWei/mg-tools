@@ -232,9 +232,9 @@ int main(int argc, char* argv[])
 		else
 			sprintf(szSize, "%d", size);
 
-		fprintf(fout, "\t{ 0x%X, (void*)%s, %s, \"%s\"}, //%s\n",
-			//obj->getInfileName(),
+		fprintf(fout, "\t{ 0x%lX/* %s */, (void*)%s, %s, \"%s\"}, //%s\n",
 			Str2Key(obj->getInfileName()),
+			obj->getInfileName(),
 			obj->getVarName(),
 			szSize,
 			obj->getAddtional(),
