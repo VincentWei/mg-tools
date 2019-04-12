@@ -89,7 +89,7 @@
 #define WIN_WIDTH               800
 #define WIN_HEIGHT              600
 
-static UChar32 utf16le_conv_to_uc32 (const unsigned char* mchar);
+static Uchar32 utf16le_conv_to_uc32 (const unsigned char* mchar);
 static GLYPHTREE* get_glyph_tree (GLYPHTREE* tree, unsigned int ch);
 
 static unsigned short scale = 1;
@@ -388,9 +388,9 @@ static unsigned char def_smooth_bitmap [] =
 
 static GLYPH def_smooth_glyph = {&def_smooth_metrics, def_smooth_bitmap};
 
-static UChar32 utf8_conv_to_uc32 (const unsigned char* mchar)
+static Uchar32 utf8_conv_to_uc32 (const unsigned char* mchar)
 {
-    UChar32 wc = *((unsigned char *)(mchar++));
+    Uchar32 wc = *((unsigned char *)(mchar++));
     int n, t;
 
     if (wc & 0x80) {
@@ -536,7 +536,7 @@ static BOOL del_from_tree(GLYPHTREE *tree, int ch)
 static int ascii_conv_to_uc32 (const unsigned char* mchar)
 {
     if (*mchar < 128)
-        return (UChar32) (*mchar);
+        return (Uchar32) (*mchar);
     else
         return '?';
 }
@@ -562,10 +562,10 @@ static GLYPHTREE* get_glyph_tree (GLYPHTREE* tree, unsigned int ch)
     return tree;
 }
 
-static UChar32 utf16le_conv_to_uc32 (const unsigned char* mchar)
+static Uchar32 utf16le_conv_to_uc32 (const unsigned char* mchar)
 {
-    UChar16 w1, w2;
-    UChar32 wc;
+    Uchar16 w1, w2;
+    Uchar32 wc;
 
     w1 = MAKEWORD (mchar[0], mchar[1]);
 

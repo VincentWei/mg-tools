@@ -6,4 +6,4 @@ rbfeditor_SOURCES=rbfeditor.c readrbf.c charset.c charset-arabic.c \
                   rbf.h charset.h gunicode.h gunichartables.h \
                   my_debug.h
 
-rbfeditor_LDADD=@MINIGUI_LIBS@
+rbfeditor_LDADD=@MINIGUI_LIBS@ -lmgutils
