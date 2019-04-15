@@ -11,6 +11,11 @@
 #ifndef __UPF_H_
 #define __UPF_H_
 
+#if (_MINIGUI_VERSION_CODE < _VERSION_CODE(4,0,0))
+#   define Uchar32 UChar32
+#   define Uchar16 UChar16
+#endif
+
 #ifdef __cplusplus
 extern "C" {
 #endif  /* __cplusplus */

@@ -25,6 +25,11 @@
 
 #include "qpf.h"
 
+#if (_MINIGUI_VERSION_CODE < _VERSION_CODE(4,0,0))
+#   define Uchar32 UChar32
+#   define Uchar16 UChar16
+#endif
+
 #define IDC_FILE_OPEN           110
 #define IDC_FILE_SAVE           120
 #define IDC_FILE_RENAME         130
