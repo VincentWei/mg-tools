@@ -54,8 +54,8 @@ The step of inner-trans:
 		// load or get it
 		LoadResouce(<res_name>,<res_type>,<usr_param>);
 		...
-		GetResouce(<key_of_res_name>);
+		GetResource(<key_of_res_name>);
 		...
-		ReleaseResource(<key_of_res_name>);
+		ReleaseRes(<key_of_res_name>);
 	
 

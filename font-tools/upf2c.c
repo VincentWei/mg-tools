@@ -51,7 +51,7 @@ int main (int arg, char *argv[])
         return 1;
     }
 
-    strcpy(name, "_incore_font_upf_");
+    strcpy(name, "upf_");
     strcat(name, argv[2]);
     s = strrchr ((const char *)argv[1], '.');
     if (s == NULL) {
@@ -70,7 +70,7 @@ int main (int arg, char *argv[])
     c_file = fopen (upf_cfile, "w");
     if (c_file == NULL) {
         printf ("Cant open the C file: %s\n", upf_cfile);
-        return 2;
+        return 3;
     }
 
     fprintf (c_file, "/*\n");
@@ -88,18 +88,18 @@ int main (int arg, char *argv[])
     fprintf (c_file, "\n");
     fprintf (c_file, "typedef struct\n");
     fprintf (c_file, "{\n");
-    fprintf (c_file, "    Uint8      width;\n");
-    fprintf (c_file, "    Uint8      height;\n");
-    fprintf (c_file, "    Sint8      ascent;\n");
-    fprintf (c_file, "    Sint8      descent;\n");
-    fprintf (c_file, "    Uint8      max_width;\n");
-    fprintf (c_file, "    Uint8      underline_pos;\n");
-    fprintf (c_file, "    Uint8      underline_width;\n");
-    fprintf (c_file, "    Sint8      leading;\n");
-    fprintf (c_file, "    Uint8      mono_bitmap;\n");
-    fprintf (c_file, "    Uint8      reserved[3];\n");
-    fprintf (c_file, "    void*      root_dir;\n");
-    fprintf (c_file, "    Uint32     file_size;\n");
+    fprintf (c_file, "    Uint8       width;\n");
+    fprintf (c_file, "    Uint8       height;\n");
+    fprintf (c_file, "    Sint8       ascent;\n");
+    fprintf (c_file, "    Sint8       descent;\n");
+    fprintf (c_file, "    Uint8       max_width;\n");
+    fprintf (c_file, "    Uint8       underline_pos;\n");
+    fprintf (c_file, "    Uint8       underline_width;\n");
+    fprintf (c_file, "    Sint8       leading;\n");
+    fprintf (c_file, "    Uint8       mono_bitmap;\n");
+    fprintf (c_file, "    Uint8       reserved[3];\n");
+    fprintf (c_file, "    const void* root_dir;\n");
+    fprintf (c_file, "    Uint32      file_size;\n");
     fprintf (c_file, "} UPFINFO;\n");
     fprintf (c_file, "\n");
 
@@ -122,10 +122,15 @@ int main (int arg, char *argv[])
     }
     fprintf (c_file, "};\n\n" );
 
-    fprintf (c_file,"const UPFINFO %s = {\n", name);
+    fprintf (c_file,"static const UPFINFO %s = {\n", name);
     fprintf (c_file,"    0, 0, 0, 0, 0, 0, 0, 0, 0, {0, 0, 0},\n");
     fprintf (c_file,"    font_data, sizeof (font_data)\n");
     fprintf (c_file,"};\n\n");
+
+    fprintf (c_file, "const void* get_incore_font_data_%s (void)\n", name);
+    fprintf (c_file, "{\n");
+    fprintf (c_file, "    return &%s;\n", name);
+    fprintf (c_file, "}\n");
 
     fprintf (c_file,"#endif /* _MGFONT_UPF */\n");
 
