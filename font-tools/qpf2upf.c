@@ -4,7 +4,7 @@
 ** vi: tabstop=4:expandtab
 **
 **
-** Copyright (C) 2005 ~ 2008, Feynman Software.
+** Copyright (C) 2005 ~ 2008, FMSoft.
 **
 ** Create date: 2008/01/26 mgwang
 */

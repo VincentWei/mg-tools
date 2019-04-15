@@ -3,10 +3,10 @@
 ** 
 ** gb18030unimap.c: GB18030 to UCS2 mapping table.
 ** 
-** Copyright (C) 2003 ~ 2007 Feynman Software.
+** Copyright (C) 2003 ~ 2007 FMSoft.
 ** Copyright (C) 2000 ~ 2002 Wei Yongming.
 **
-** All right reserved by Feynman Software.
+** All right reserved by FMSoft.
 **
 ** Create date: 2002/11/12
 */

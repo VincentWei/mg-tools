@@ -40,7 +40,7 @@ bool UPF2C::translate(const char* infile, const char* outfile,const char* varnam
 
     if (tab_file==NULL)
     {
-        fprintf (stderr,"Cant open the table file!\n");
+        fprintf (stderr,"Cant open the table file: %s!\n", infile);
         return false;
     }
 
@@ -53,9 +53,9 @@ bool UPF2C::translate(const char* infile, const char* outfile,const char* varnam
     fprintf (c_file, "** This file is created by 'upf2c' by FMSoft (http://www.fmsoft.cn).\n");
     fprintf (c_file, "** Please do not modify it manually.\n");
     fprintf (c_file, "**\n");
-    fprintf (c_file, "** Copyright (C) 2009 Feynman Software\n");
+    fprintf (c_file, "** Copyright (C) 2009 FMSoft\n");
     fprintf (c_file, "**\n");
-    fprintf (c_file, "** All right reserved by Feynman Software.\n");
+    fprintf (c_file, "** All right reserved by FMSoft.\n");
     fprintf (c_file, "**\n");
     fprintf (c_file, "*/\n");
 

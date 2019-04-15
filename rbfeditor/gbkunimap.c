@@ -3,9 +3,9 @@
 **
 ** gbkunimap.c: GBK to UCS-2 map
 **
-** Copyright (C) 2007 Feynman Software.
+** Copyright (C) 2007 FMSoft.
 **
-** All right reserved by Feynman Software.
+** All right reserved by FMSoft.
 **
 ** Create date: 2007/07/17
 */

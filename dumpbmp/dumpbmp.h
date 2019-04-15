@@ -1,5 +1,5 @@
 /*
-** Copyright (C) 2003, Feynman Software.
+** Copyright (C) 2003, FMSoft.
 */
 
 #ifndef _DUMPBMP_H

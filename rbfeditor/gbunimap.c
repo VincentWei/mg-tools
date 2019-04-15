@@ -3,10 +3,10 @@
 ** 
 ** gbunimap.c: GB2312 to UCS-2 map
 ** 
-** Copyright (C) 2003 ~ 2007 Feynman Software.
+** Copyright (C) 2003 ~ 2007 FMSoft.
 ** Copyright (C) 2000 ~ 2002 Wei Yongming.
 **
-** All right reserved by Feynman Software.
+** All right reserved by FMSoft.
 **
 ** Create date: 2000/08/25
 */

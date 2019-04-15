@@ -3,7 +3,7 @@
 ** 
 ** load_upf.c: a upf loader
 **
-** Copyright (C) 2009 Feynman Software
+** Copyright (C) 2009 FMSoft
 **
 ** Author: WEI Yongming
 **

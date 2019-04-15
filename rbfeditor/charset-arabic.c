@@ -3,10 +3,10 @@
 ** 
 ** charset.c: The charset's arabic operation set.
 ** 
-** Copyright (C) 2003 ~ 2007 Feynman Software
+** Copyright (C) 2003 ~ 2007 FMSoft
 ** Copyright (C) 2000 ~ 2002 Wei Yongming.
 **
-** All right reserved by Feynman Software.
+** All right reserved by FMSoft.
 **
 ** Current maintainer: Wei Yongming.
 **

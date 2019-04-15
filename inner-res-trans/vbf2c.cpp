@@ -371,9 +371,9 @@ static void dumpVBF2C (const char* outfile, const char* name, const VBFINFO* vbf
     fprintf (fo,"** This file is created by 'vbf2c' by FMSoft (http://www.fmsoft.cn).\n");
     fprintf (fo,"** Please do not modify it manually.\n");
     fprintf (fo,"**\n");
-    fprintf (fo,"** Copyright (C) 2007 Feynman Software\n");
+    fprintf (fo,"** Copyright (C) 2007 FMSoft\n");
     fprintf (fo,"**\n");
-    fprintf (fo,"** All right reserved by Feynman Software.\n");
+    fprintf (fo,"** All right reserved by FMSoft.\n");
     fprintf (fo,"**\n");
     fprintf (fo,"*/\n");
 

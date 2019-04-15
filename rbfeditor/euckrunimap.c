@@ -3,10 +3,10 @@
 ** 
 ** euckrunimap.c: EUC-KR to UNICODE map.
 ** 
-** Copyright (C) 2003 ~ 2007 Feynman Software.
+** Copyright (C) 2003 ~ 2007 FMSoft.
 ** Copyright (C) 2000 ~ 2002 Wei Yongming.
 **
-** All rights reserved by Feynman Software.
+** All rights reserved by FMSoft.
 **
 ** Create date: 2003/02/14
 */

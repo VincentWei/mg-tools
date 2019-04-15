@@ -3,7 +3,7 @@
 **
 ** rbfeditor.c: A MiniGUI RBF font editor.
 **
-** Copyright (C) 2004 Feynman Software.
+** Copyright (C) 2004 FMSoft.
 */
 
 /*

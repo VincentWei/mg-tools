@@ -3,7 +3,7 @@
 ** 
 ** gen_upf.c: a upf file generator
 **
-** Copyright (C) 2009 Feynman Software
+** Copyright (C) 2009 FMSoft
 **
 ** Author: WEI Yongming
 **

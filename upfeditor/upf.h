@@ -3,7 +3,7 @@
 ** 
 ** qpf.h: qpfeditor header file.
 **
-** Copyright (C) 2007 Feynman Software
+** Copyright (C) 2007 FMSoft
 **
 ** Create date: 2007/07/27
 */

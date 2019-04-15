@@ -6,7 +6,7 @@
 ** listbox.c: Sample program for MiniGUI Programming Guide
 **      The tool of image dumper.
 ** 
-** Copyright (C) 2004 ~ 2006 Feynman Software.
+** Copyright (C) 2004 ~ 2006 FMSoft.
 **
 ** License: GPL
 */

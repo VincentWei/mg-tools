@@ -3,7 +3,7 @@
 ** 
 ** readupf.c: Read UPF font from file.
 **
-** Copyright (C) 2009 Feynman Software
+** Copyright (C) 2009 FMSoft
 **
 ** Create date: 2007/07/27
 */

@@ -4,7 +4,7 @@
 ** varbitmap.h: the head file of raw bitmap font operation set.
 **
 ** Copyright (C) 2000 ~ 2002, Wei Yongming.
-** Copyright (C) 2003 ~ 2007  Feynman Software.
+** Copyright (C) 2003 ~ 2007  FMSoft.
 ** 
 */
 

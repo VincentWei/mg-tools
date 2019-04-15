@@ -3,7 +3,7 @@
 ** 
 ** parse_bdf.c: a bdf file parsor
 **
-** Copyright (C) 2009 Feynman Software
+** Copyright (C) 2009 FMSoft
 **
 ** Author: WEI Yongming
 **

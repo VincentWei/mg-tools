@@ -3,7 +3,7 @@
 ** 
 ** readrbf.c: Read RFB font from file.
 **
-** Copyright (C) 2004, Feynman Software
+** Copyright (C) 2004, FMSoft
 */
 
 /*

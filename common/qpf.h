@@ -1,5 +1,5 @@
 /*
-** Copyright (C) 2009 Feynman Software
+** Copyright (C) 2009 FMSoft
 ** Author: WEI Yongming
 ** Create date: 2009/12/19
 */

@@ -5,7 +5,7 @@
 **
 ** vbf2c.c: Dump VBF font to in-core C file.
 **
-** Copyright (C) 2007, Feynman Software.
+** Copyright (C) 2007, FMSoft.
 **
 ** Create date: 2007/04/24
 */
@@ -597,9 +597,9 @@ static void dumpVBF2C (const char* name, const VBFINFO* vbf_info, int len_bits)
     printf ("** This file is created by 'vbf2c' by FMSoft (http://www.fmsoft.cn).\n");
     printf ("** Please do not modify it manually.\n");
     printf ("**\n");
-    printf ("** Copyright (C) 2007 Feynman Software\n");
+    printf ("** Copyright (C) 2007 FMSoft\n");
     printf ("**\n");
-    printf ("** All right reserved by Feynman Software.\n");
+    printf ("** All right reserved by FMSoft.\n");
     printf ("**\n");
     printf ("*/\n");
 

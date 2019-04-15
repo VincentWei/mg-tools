@@ -3,7 +3,7 @@
 **
 ** vbfeditor.c: A VBF font editor.
 **
-** Copyright (C) 2003 Feynman Software.
+** Copyright (C) 2003 FMSoft.
 */
 
 /*

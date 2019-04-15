@@ -3,9 +3,9 @@
 ** 
 ** jisunimap.c: EUC-JIS to UNICODE map.
 ** 
-** Copyright (C) 2003 ~ 2007 Feynman Software
+** Copyright (C) 2003 ~ 2007 FMSoft
 **
-** All rights reserved by Feynman Software.
+** All rights reserved by FMSoft.
 **
 ** Create date: 2003/02/14
 */
