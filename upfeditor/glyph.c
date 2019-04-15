@@ -34,10 +34,10 @@ static GLYPHMETRICS def_metrics = {{0, 0, 8, 2, 1, 0, 8, 0, 0}};
 static unsigned char def_bitmap [] = {0xFE, 0x7F};
 static GLYPH def_glyph = {&def_metrics, def_bitmap};
 
-UChar32 utf16le_conv_to_uc32 (const unsigned char* mchar)
+Uchar32 utf16le_conv_to_uc32 (const unsigned char* mchar)
 {
-    UChar16 w1, w2;
-    UChar32 wc;
+    Uchar16 w1, w2;
+    Uchar32 wc;
 
     w1 = MAKEWORD (mchar[0], mchar[1]);
 

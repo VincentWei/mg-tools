@@ -194,7 +194,7 @@ BOOL upf_delete_char_glyph (UPFINFO* upf_info, int ch);
 
 //BOOL delete_glyph_from_tree (UPFGLYPHTREE** root, int uc32);
 
-UChar32 utf16le_conv_to_uc32 (const unsigned char* mchar);
+Uchar32 utf16le_conv_to_uc32 (const unsigned char* mchar);
 
 void print_tree (UPFGLYPHTREE* tree);
 #ifdef __cplusplus

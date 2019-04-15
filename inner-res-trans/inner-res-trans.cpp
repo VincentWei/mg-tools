@@ -48,7 +48,7 @@ const char* str_help = " inner-trans param: \n"
 	"-h|? help\n\n";
 
 static void show_help(){
-	printf(str_help);
+	puts(str_help);
 }
 static bool parser_args(int argc, char* argv[])
 {
@@ -129,7 +129,7 @@ static int splitestr(char* str, char** arr, const char* chsp)
 			*str = 0;
 			str++;
 			while(*str && strchr(chsp,*str)) str++;
-			if(str == '\0') break;
+			if(*str == '\0') break;
 			arr[count ++] = str;
 		}
 		str ++;

@@ -77,7 +77,6 @@ bdf2upf/bdf2upf
 cryptool/cryptool
 font-tools/bdf2vbf
 font-tools/qpf2upf
-font-tools/res/
 font-tools/upf2c
 font-tools/upfbbox
 font-tools/upfdump
@@ -88,7 +87,6 @@ image-dumper/imagedumper
 inner-res-trans/mg-inner-res-trans
 mgcfg-trans/mgcfg-trans
 ngux-tools/gen_incore_bitmap
-obsolete/
 product-id/product-id
 qpfeditor/qpfeditor
 rbfeditor/rbfeditor

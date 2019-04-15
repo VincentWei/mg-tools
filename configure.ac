@@ -1,5 +1,5 @@
 # Process this file with autoconf to produce a configure script.
-AC_INIT(mg-tools, 3.2.0, consult@minigui.com)
+AC_INIT(mg-tools, 3.2.1, consult@minigui.com)
 AC_CONFIG_SRCDIR([vbfeditor/vbfeditor.c])
 
 AM_INIT_AUTOMAKE
@@ -67,6 +67,7 @@ MINIGUI_LIBS=""
 MINIGUI_TOOLS=""
 if test "x$have_libminigui" != "xno"; then
   PKG_CHECK_MODULES([MINIGUI], [minigui >= 3.0.12])
+  PKG_CHECK_MODULES([MGUTILS], [mgutils >= 1.2.0])
   MINIGUI_TOOLS="ngux-tools rbfeditor vbfeditor qpfeditor upfeditor image-dumper"
 fi
 
