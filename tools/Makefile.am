@@ -1,4 +1,6 @@
-noinst_PROGRAMS= bin2c bdf2bin
+bin_PROGRAMS = bin2c
+
+noinst_PROGRAMS = bdf2bin
 
 bin2c_SOURCES= bin2c.c
 
