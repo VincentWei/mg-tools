@@ -1,3 +1,15 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//                          IMPORTANT NOTICE
+//
+// The following open source license statement does not apply to any
+// entity in the Exception List published by FMSoft.
+//
+// For more information, please visit:
+//
+// https://www.fmsoft.cn/exception-list
+//
+//////////////////////////////////////////////////////////////////////////////
 /*
  * KON2 - Kanji ON Console -
  * Copyright (C) 1992-1996 Takashi MANABE (manabe@papilio.tutics.tut.ac.jp)

@@ -1,3 +1,15 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//                          IMPORTANT NOTICE
+//
+// The following open source license statement does not apply to any
+// entity in the Exception List published by FMSoft.
+//
+// For more information, please visit:
+//
+// https://www.fmsoft.cn/exception-list
+//
+//////////////////////////////////////////////////////////////////////////////
 /*
  * Copyright 1996, 1997, 1998, 1999 Computing Research Labs,
  * New Mexico State University

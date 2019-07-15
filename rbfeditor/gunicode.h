@@ -1,3 +1,15 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//                          IMPORTANT NOTICE
+//
+// The following open source license statement does not apply to any
+// entity in the Exception List published by FMSoft.
+//
+// For more information, please visit:
+//
+// https://www.fmsoft.cn/exception-list
+//
+//////////////////////////////////////////////////////////////////////////////
 /* gunicode.h - Unicode manipulation functions
  *
  *  Copyright (C) 1999, 2000 Tom Tromey
