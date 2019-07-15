@@ -1,13 +1,21 @@
 /*
-** $Id: vbf2c.c 370 2009-12-28 08:54:28Z weiym $
-** 
-** vi: tabstop=4:expandtab
+** This file is part of mg-tools, a collection of programs to convert
+** and maintain the resource for MiniGUI.
 **
-** vbf2c.c: Dump VBF font to in-core C file.
+** Copyright (C) 2010 ~ 2019, Beijing FMSoft Technologies Co., Ltd.
 **
-** Copyright (C) 2007, FMSoft.
+** This program is free software: you can redistribute it and/or modify
+** it under the terms of the GNU General Public License as published by
+** the Free Software Foundation, either version 3 of the License, or
+** (at your option) any later version.
 **
-** Create date: 2007/04/24
+** This program is distributed in the hope that it will be useful,
+** but WITHOUT ANY WARRANTY; without even the implied warranty of
+** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+** GNU General Public License for more details.
+**
+** You should have received a copy of the GNU General Public License
+** along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 /*

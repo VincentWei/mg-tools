@@ -1,13 +1,21 @@
-/* 
-** $Id: gbkunimap.c,v 1.1 2008-02-19 11:32:54 wangxuguang Exp $
+/*
+** This file is part of mg-tools, a collection of programs to convert
+** and maintain the resource for MiniGUI.
 **
-** gbkunimap.c: GBK to UCS-2 map
+** Copyright (C) 2010 ~ 2019, Beijing FMSoft Technologies Co., Ltd.
 **
-** Copyright (C) 2007 FMSoft.
+** This program is free software: you can redistribute it and/or modify
+** it under the terms of the GNU General Public License as published by
+** the Free Software Foundation, either version 3 of the License, or
+** (at your option) any later version.
 **
-** All right reserved by FMSoft.
+** This program is distributed in the hope that it will be useful,
+** but WITHOUT ANY WARRANTY; without even the implied warranty of
+** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+** GNU General Public License for more details.
 **
-** Create date: 2007/07/17
+** You should have received a copy of the GNU General Public License
+** along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <minigui/common.h>

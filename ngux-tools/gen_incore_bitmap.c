@@ -1,21 +1,22 @@
 /*
- *  gen_incore_bitmap - compresses data files & converts the result to C source code
- *  Copyright (C) 1998-2000  Anders Widell  <awl@hem.passagen.se>
- *
- *  This program is free software; you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation; either version 2 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with this program; if not, write to the Free Software
- *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
- */
+** This file is part of mg-tools, a collection of programs to convert
+** and maintain the resource for MiniGUI.
+**
+** Copyright (C) 2010 ~ 2019, Beijing FMSoft Technologies Co., Ltd.
+**
+** This program is free software: you can redistribute it and/or modify
+** it under the terms of the GNU General Public License as published by
+** the Free Software Foundation, either version 3 of the License, or
+** (at your option) any later version.
+**
+** This program is distributed in the hope that it will be useful,
+** but WITHOUT ANY WARRANTY; without even the implied warranty of
+** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+** GNU General Public License for more details.
+**
+** You should have received a copy of the GNU General Public License
+** along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
 
 /*
  * This command uses the zlib library to compress each file given on
@@ -525,86 +526,86 @@ int createGifAnimateFromFile (BitmapFrameArray* res, const char* file)
     IMAGEDESC ImageDesc;
     BitmapFrame* frame, *frames = NULL, *current = NULL;
     int frame_count = 0;
-	MG_RWops* area = NULL;
+    MG_RWops* area = NULL;
 
-	if (!(area = MGUI_RWFromFile (file, "rb"))) {
-		return -1;
+    if (!(area = MGUI_RWFromFile (file, "rb"))) {
+        return -1;
     }
 
-	if (ReadGIFGlobal (area, &GifScreen) < 0)
+    if (ReadGIFGlobal (area, &GifScreen) < 0)
         return -1;
 
     if ((ok = ReadOK (area, &c, 1)) == 0) {
         return -1;
     }
 
-	while (c != ';' && ok > 0) {
-		switch (c) {
-			case '!':
-				if ( (ok = ReadOK (area, &c, 1)) == 0) {
+    while (c != ';' && ok > 0) {
+        switch (c) {
+            case '!':
+                if ( (ok = ReadOK (area, &c, 1)) == 0) {
                     return 0;
-				}
-				DoExtension (area, c, &GifScreen);
-				break;
+                }
+                DoExtension (area, c, &GifScreen);
+                break;
 
-			case ',':
-				if (ReadImageDesc (area, &ImageDesc, &GifScreen) < 0) {
+            case ',':
+                if (ReadImageDesc (area, &ImageDesc, &GifScreen) < 0) {
                     return 0;
-				}
-				else {
-					if (ReadImage (area, &mybmp, &ImageDesc, &GifScreen, 0) < 0)
+                }
+                else {
+                    if (ReadImage (area, &mybmp, &ImageDesc, &GifScreen, 0) < 0)
                         return 0;
-				}
+                }
 
-				frame = (BitmapFrame*) calloc(1, sizeof(BitmapFrame));
+                frame = (BitmapFrame*) calloc(1, sizeof(BitmapFrame));
 
 
-				if(!frame)
-				    return -1;
+                if(!frame)
+                    return -1;
 
-				frame->bmp = (BITMAP*) calloc(1, sizeof(BITMAP));
+                frame->bmp = (BITMAP*) calloc(1, sizeof(BITMAP));
 
                 if(!frame->bmp)
                     return -1;
 
-				frame->next = NULL;
-				frame->off_y = ImageDesc.Left;
-				frame->off_x = ImageDesc.Top;
-				frame->disposal = GifScreen.disposal;
+                frame->next = NULL;
+                frame->off_y = ImageDesc.Left;
+                frame->off_x = ImageDesc.Top;
+                frame->disposal = GifScreen.disposal;
 
-				frame->delay_time = (GifScreen.delayTime>10)?GifScreen.delayTime:10;
+                frame->delay_time = (GifScreen.delayTime>10)?GifScreen.delayTime:10;
 
-				if(ExpandMyBitmap(HDC_SCREEN, frame->bmp, &mybmp, ImageDesc.ColorMap, 0) != 0)
-				{
-					free(frame);
-					free(mybmp.bits);
+                if(ExpandMyBitmap(HDC_SCREEN, frame->bmp, &mybmp, ImageDesc.ColorMap, 0) != 0)
+                {
+                    free(frame);
+                    free(mybmp.bits);
                     return -1;
-				}
+                }
 
-				if(frames == NULL)
-				{
-					frames = frame;
-					current = frame;
-					current->prev = NULL;
-				}
-				else
-				{
-					frame->prev = current;
-					current->next = frame;
-					current = current->next;
-				}
+                if(frames == NULL)
+                {
+                    frames = frame;
+                    current = frame;
+                    current->prev = NULL;
+                }
+                else
+                {
+                    frame->prev = current;
+                    current->next = frame;
+                    current = current->next;
+                }
 
                 //m_last_frame = frame;
 
-				//m_nr_frames++;
+                //m_nr_frames++;
                 frame_count++;
-				break;
-		}
+                break;
+        }
         ok = ReadOK (area, &c, 1);
-	}
-	//m_current_frame = m_frames;
-	//m_max_width = GifScreen.Width;
-	//m_max_height = GifScreen.Height;
+    }
+    //m_current_frame = m_frames;
+    //m_max_width = GifScreen.Width;
+    //m_max_height = GifScreen.Height;
     res->nr_frames = frame_count;
     res->frames = frames;
 
