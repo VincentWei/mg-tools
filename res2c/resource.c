@@ -1,8 +1,34 @@
-/**
- * $Id$
- *
- * Author: XiaoweiYan
- */
+///////////////////////////////////////////////////////////////////////////////
+//
+//                          IMPORTANT NOTICE
+//
+// The following open source license statement does not apply to any
+// entity in the Exception List published by FMSoft.
+//
+// For more information, please visit:
+//
+// https://www.fmsoft.cn/exception-list
+//
+//////////////////////////////////////////////////////////////////////////////
+/*
+** This file is part of mg-tools, a collection of programs to convert
+** and maintain the resource for MiniGUI.
+**
+** Copyright (C) 2010 ~ 2019, Beijing FMSoft Technologies Co., Ltd.
+**
+** This program is free software: you can redistribute it and/or modify
+** it under the terms of the GNU General Public License as published by
+** the Free Software Foundation, either version 3 of the License, or
+** (at your option) any later version.
+**
+** This program is distributed in the hope that it will be useful,
+** but WITHOUT ANY WARRANTY; without even the implied warranty of
+** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+** GNU General Public License for more details.
+**
+** You should have received a copy of the GNU General Public License
+** along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -38,7 +64,7 @@ struct _MAPFILELIST
 typedef struct _RPINFO
 {
     PMAPFILELIST head;
-	int          ref;
+    int          ref;
     void         *data;
     long         data_size;
 }RPINFO;
@@ -112,7 +138,7 @@ static void del_alllist(HPACKAGE package)
 
     while(head) {
 #ifdef WIN32
-		win_munmap(head->data);
+        win_munmap(head->data);
 #else
 #if HAVE_MMAP
         munmap (head->data, head->data_size);
@@ -167,7 +193,7 @@ static int del_list(HPACKAGE package, Uint32 filename_id)
 
     if (found == TRUE) {
 #ifdef WIN32
-		win_munmap(list->data);
+        win_munmap(list->data);
 #else
 #if HAVE_MMAP
         munmap (list->data, list->data_size);
@@ -235,7 +261,7 @@ binary_search_iditem (Uint32 *sect_base, Uint32 res_id)
 static char* mmap_file (const char *file_name, long *file_size)
 {
 #ifdef WIN32
-	return (char*)win_mmap(file_name);
+    return (char*)win_mmap(file_name);
 #else
     FILE* fp = NULL;
     void* data;
@@ -306,10 +332,10 @@ char* get_res_sectaddr (HPACKAGE hPackage, int type)
     NCSRM_HEADER     *res_head;
     NCSRM_TYPEITEM   *type_item;
 
-	if(!hPackage)
-		return NULL;
+    if(!hPackage)
+        return NULL;
 
-	res_head = (NCSRM_HEADER*)((PRPINFO)hPackage)->data;
+    res_head = (NCSRM_HEADER*)((PRPINFO)hPackage)->data;
 
     type_item = search_type_item (res_head, type);
 
@@ -441,19 +467,19 @@ HPACKAGE ncsLoadResPackageFromFile (const char* fileName)
     //set ncs system renderer for default renderer
     //ncsSetSystemRenderer(ncsGetString((HPACKAGE)package, NCSRM_SYSSTR_DEFRDR));
 
-	package->ref = 1;
+    package->ref = 1;
     return (HPACKAGE)package;
 }
 
 void ncsUnloadResPackage (HPACKAGE package)
 {
-	PRPINFO prpinfo;
+    PRPINFO prpinfo;
     if (package == HPACKAGE_NULL)
         return;
 
-	prpinfo = (PRPINFO)package;
-	if(!prpinfo || --prpinfo->ref > 0)
-		return ;
+    prpinfo = (PRPINFO)package;
+    if(!prpinfo || --prpinfo->ref > 0)
+        return ;
 
     del_alllist(package);
     free (prpinfo);
