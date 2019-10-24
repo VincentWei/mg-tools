@@ -94,6 +94,7 @@ AC_OUTPUT(
     font-tools/Makefile
     mgcfg-trans/Makefile
     inner-res-trans/Makefile
+    res2c/Makefile
     ngux-tools/Makefile
     product-id/Makefile
     cryptool/Makefile
