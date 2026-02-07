@@ -1,5 +1,5 @@
 # Process this file with autoconf to produce a configure script.
-AC_INIT(mg-tools, 3.2.1, consult@minigui.com)
+AC_INIT(mg-tools, 5.0.17, consult@minigui.com)
 AC_CONFIG_SRCDIR([vbfeditor/vbfeditor.c])
 
 AM_INIT_AUTOMAKE
