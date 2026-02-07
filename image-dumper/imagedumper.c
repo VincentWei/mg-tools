@@ -54,7 +54,7 @@
 
 #define IDC_PROPSHEET  200
 
-static int MainWinProc(HWND hwnd, int message, WPARAM wParam, LPARAM lParam)
+static LRESULT MainWinProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     HWND hwnd_prop;
     switch (message)

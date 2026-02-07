@@ -117,7 +117,7 @@
 #define VAL_DEBUG
 #include <my_debug.h>
 
-typedef int (*CONVTO32)(const unsigned char* mchar);
+typedef Uchar32 (*CONVTO32)(const unsigned char* mchar);
 CONVTO32 conv_to_uc32 = utf16le_conv_to_uc32;
 BOOL scrollwnd1_fresh;
 BOOL scrollwnd2_fresh;
@@ -624,7 +624,7 @@ static int add_char_mywinentry(HWND hWnd)
 #define IDC_SCROLLWND2          600
 
 #define MSG_RECREATE_MEMDC      (MSG_USER + 1)
-static int char_table_container_proc1 (HWND hWnd, int message, WPARAM wParam, LPARAM lParam)
+static LRESULT char_table_container_proc1 (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
 
 	switch (message) {
@@ -708,7 +708,7 @@ static int char_table_container_proc1 (HWND hWnd, int message, WPARAM wParam, LP
 }
 
 
-static int char_table_container_proc2 (HWND hWnd, int message, WPARAM wParam, LPARAM lParam)
+static LRESULT char_table_container_proc2 (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	switch (message) {
 		case MSG_PAINT:
@@ -788,7 +788,7 @@ static int char_table_container_proc2 (HWND hWnd, int message, WPARAM wParam, LP
 	return DefaultContainerProc (hWnd, message, wParam, lParam);
 }
 
-static int ViewWinProc (HWND hWnd, int message, WPARAM wParam, LPARAM lParam)
+static LRESULT ViewWinProc (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     static NEWFILEDLGDATA filedlgdata =
             {FALSE,FALSE,".","*.upf","./","All file(*.*)|upf file(*.upf)",1};

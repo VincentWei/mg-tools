@@ -265,7 +265,7 @@ static void fill_boxes (HWND hDlg, const char* path)
 #endif
 }
 
-static void dir_notif_proc (HWND hwnd, int id, int nc, DWORD add_data)
+static void dir_notif_proc (HWND hwnd, LINT id, int nc, DWORD add_data)
 {
     //printf ("DIR receive code %i\n", nc);
     if (nc == LBN_DBLCLK || nc == LBN_ENTER) {
@@ -320,7 +320,7 @@ static char* bitmap[] =
     "ARGB8888-32bit"
 };
 
-static void file_notif_proc (HWND hwnd, int id, int nc, DWORD add_data)
+static void file_notif_proc (HWND hwnd, LINT id, int nc, DWORD add_data)
 {
     /* Do nothing */
 }
@@ -404,7 +404,7 @@ static void save_bmp_2c(HWND hDlg)
         DeleteMemDC(mem_dc);
 }
 
-int PropsheetWinProc2 (HWND hDlg, int message, WPARAM wParam, LPARAM lParam)
+LRESULT PropsheetWinProc2 (HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message) 
     {

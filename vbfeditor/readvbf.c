@@ -137,7 +137,7 @@ static BOOL LoadVarBitmapFont (const char* file, MYVBFINFO* info)
     info->def_glyph = propt->def_glyph;
 #endif
 
-    info-> bbox = (const VBF_BBOX*)
+    info-> bbox = (const MYVBF_BBOX*)
             (layout.len_bboxs ? temp+layout.off_bboxs-HEADER_LEN : NULL);
     info-> advance_x = (const char*)
             (layout.len_advxs ? temp+layout.off_advxs-HEADER_LEN : NULL);

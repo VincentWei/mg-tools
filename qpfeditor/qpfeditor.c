@@ -120,7 +120,7 @@ static Uchar32 utf16le_conv_to_uc32 (const unsigned char* mchar);
 static GLYPHTREE* get_glyph_tree (GLYPHTREE* tree, unsigned int ch);
 
 static unsigned short scale = 1;
-typedef int (*CONVTO32)(const unsigned char* mchar);
+typedef Uchar32 (*CONVTO32)(const unsigned char* mchar);
 CONVTO32 conv_to_uc32 = utf16le_conv_to_uc32;
 
 static int file_menu_ids[] =
@@ -1006,7 +1006,7 @@ static int add_char_mywinentry(HWND hWnd)
 static HWND hscroll_wnd1;
 static HDC  mem_dc1 = 0; 
 
-static int char_table_container_proc1 (HWND hWnd, int message, WPARAM wParam, LPARAM lParam)
+static LRESULT char_table_container_proc1 (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
 
 	switch (message) {
@@ -1078,7 +1078,7 @@ static int char_table_container_proc1 (HWND hWnd, int message, WPARAM wParam, LP
 static HWND hscroll_wnd2;
 static HDC  mem_dc2 = 0; 
 
-static int char_table_container_proc2 (HWND hWnd, int message, WPARAM wParam, LPARAM lParam)
+static LRESULT char_table_container_proc2 (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
 
 	switch (message) {
@@ -1151,7 +1151,7 @@ static int char_table_container_proc2 (HWND hWnd, int message, WPARAM wParam, LP
 	return DefaultContainerProc (hWnd, message, wParam, lParam);
 }
 
-static int ViewWinProc (HWND hWnd, int message, WPARAM wParam, LPARAM lParam)
+static LRESULT ViewWinProc (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     static NEWFILEDLGDATA filedlgdata =
             {FALSE,FALSE,".","*.qpf","./","All file(*.*)|qpf file(*.qpf)",1};

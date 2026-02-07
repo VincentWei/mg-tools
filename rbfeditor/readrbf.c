@@ -179,7 +179,7 @@ static CTRLDATA ctrl_select_font_info [] =
 };
 
 static WNDPROC old_sledit_proc;
-static int decnum_sledit_proc (HWND hWnd, int message, WPARAM wParam, LPARAM lParam)
+static LRESULT decnum_sledit_proc (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     if (message == MSG_CHAR) {
         /*127 is char esc*/
@@ -191,7 +191,7 @@ static int decnum_sledit_proc (HWND hWnd, int message, WPARAM wParam, LPARAM lPa
 }
 
 
-static int select_font_info_proc (HWND hWnd, int message, WPARAM wParam, LPARAM lParam)
+static LRESULT select_font_info_proc (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     static HWND hWnd_charset;
     static HWND hWnd_width;
@@ -430,7 +430,7 @@ static CTRLDATA CtrlSelectChar [] =
 };
 
 
-static int hexnum_sledit_proc (HWND hWnd, int message, WPARAM wParam, LPARAM lParam)
+static LRESULT hexnum_sledit_proc (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     if (message == MSG_CHAR) {
         /*127 is char esc*/
@@ -441,7 +441,7 @@ static int hexnum_sledit_proc (HWND hWnd, int message, WPARAM wParam, LPARAM lPa
     return (*old_sledit_proc) (hWnd, message, wParam, lParam);
 }
 
-static int SelectCharBoxProc (HWND hDlg, int message, WPARAM wParam, LPARAM lParam)
+static LRESULT SelectCharBoxProc (HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message) {
     case MSG_INITDIALOG:

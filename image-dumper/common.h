@@ -44,9 +44,9 @@ extern DLGTEMPLATE dlg_propsheet2;
 extern CTRLDATA propsheet1_data[];
 extern CTRLDATA propsheet2_data[];
 
-int PropsheetWinProc1 (HWND hDlg, int message, WPARAM wParam, LPARAM lParam);
+LRESULT PropsheetWinProc1 (HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam);
 
-int PropsheetWinProc2 (HWND hDlg, int message, WPARAM wParam, LPARAM lParam);
+LRESULT PropsheetWinProc2 (HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam);
 
 #if 0
 extern char _path_dst_select [MAX_PATH + 1];

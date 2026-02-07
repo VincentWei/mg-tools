@@ -323,7 +323,7 @@ static void show_source_file (HWND hwnd)
     SetWindowText (hwnd, _cwd_src);
 }
 
-static void dir_notif_proc (HWND hwnd, int id, int nc, DWORD add_data)
+static void dir_notif_proc (HWND hwnd, LINT id, int nc, DWORD add_data)
 {
     if (nc == LBN_DBLCLK || nc == LBN_ENTER) 
     {
@@ -443,7 +443,7 @@ static void dir_notif_proc (HWND hwnd, int id, int nc, DWORD add_data)
     }
 }
 
-static void target_notif_proc (HWND hwnd, int id, int nc, DWORD add_data)
+static void target_notif_proc (HWND hwnd, LINT id, int nc, DWORD add_data)
 {
     //printf ("target_notif_proc message = 0x%i\n", id);
     if (nc == EN_CHANGE)
@@ -453,7 +453,7 @@ static void target_notif_proc (HWND hwnd, int id, int nc, DWORD add_data)
     }
 }
 
-static void file_notif_proc (HWND hwnd, int id, int nc, DWORD add_data)
+static void file_notif_proc (HWND hwnd, LINT id, int nc, DWORD add_data)
 {
 #if 0
     int * sel_item_id;
@@ -585,7 +585,7 @@ static void convert_to_file (HWND hDlg)
     convert_over ();
 }
 
-int PropsheetWinProc1 (HWND hDlg, int message, WPARAM wParam, LPARAM lParam)
+LRESULT PropsheetWinProc1 (HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message) 
     {

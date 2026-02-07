@@ -14,7 +14,7 @@
 ** This file is part of mg-tools, a collection of programs to convert
 ** and maintain the resource for MiniGUI.
 **
-** Copyright (C) 2010 ~ 2019, Beijing FMSoft Technologies Co., Ltd.
+** Copyright (C) 2010 ~ 2026, Beijing FMSoft Technologies Co., Ltd.
 **
 ** This program is free software: you can redistribute it and/or modify
 ** it under the terms of the GNU General Public License as published by
@@ -725,7 +725,7 @@ static void setCharHeight(int height)
     initGridFrame();
 }
 
-static int RenameProc(HWND hDlg, int message, WPARAM wParam, LPARAM lParam)
+static LRESULT RenameProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 {
     int id;
     switch( message ) {
@@ -754,10 +754,10 @@ static int RenameProc(HWND hDlg, int message, WPARAM wParam, LPARAM lParam)
 static HWND create_rename_dlg(HWND hWnd)
 {
     RenameDlg.controls = CtrlRenameDlg;
-    return DialogBoxIndirectParam(&RenameDlg, hWnd, RenameProc, 0L);
+    return (HWND)DialogBoxIndirectParam(&RenameDlg, hWnd, RenameProc, 0L);
 }
 
-static int ViewWinProc (HWND hWnd, int message, WPARAM wParam, LPARAM lParam)
+static LRESULT ViewWinProc (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     static NEWFILEDLGDATA filedlgdata ={FALSE, FALSE, ".", "*.vbf", "./", "All file(*.*)|vbf file(*.vbf)",1};
 

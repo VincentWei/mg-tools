@@ -417,7 +417,7 @@ static void move_glyph_down (HWND hWnd)
     InvalidateRect (hWnd, NULL, TRUE);
 }
 
-static int view_win_proc (HWND hWnd, int message, WPARAM wParam, LPARAM lParam)
+static LRESULT view_win_proc (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message) {
         case MSG_CREATE:
