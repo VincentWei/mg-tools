@@ -37,7 +37,7 @@
 
 #include "bdf.h"
 
-#define LINE_BUF_LEN       256
+#define LINE_BUF_LEN       1024
 
 /* get one line from file */
 static char* my_getline (char* buf, FILE* fp)
